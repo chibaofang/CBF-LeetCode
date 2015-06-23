@@ -7,7 +7,7 @@ int main()
   float length = 0;
   int cards = 0;
   printf("Please enther the length:\n");
-  scanf("%3.2f",&length);
+  scanf("%f",&length);
   cards = card_number(length);
   printf("%d card(s)\n", cards);
   
