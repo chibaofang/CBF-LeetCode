@@ -23,7 +23,7 @@ int card_no(float length){
     return -1;
   }else{
     while(length_sum < length){
-      a = 1.00/n;
+      a = 1.00/n;  /*考察浮点数的运算规则*/
       length_sum += a;
       n++;
     }
