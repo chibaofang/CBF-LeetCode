@@ -4,7 +4,7 @@ int card_number(float);
 
 int main()
 {
-  float length = 0;
+  float length = 0.00;
   int cards = 0;
   printf("Please enther the length:\n");
   while(scanf("%f",&length) != EOF){
@@ -21,8 +21,8 @@ int main()
 
 int card_number(float length){
   int n = 2;
-  float length_sum = 0;
-  float a = 0;
+  float length_sum = 0.00;
+  float a = 0.00;
   if(length < 0){
     printf("WARNING:the value should be positive\n");
     return -1;
