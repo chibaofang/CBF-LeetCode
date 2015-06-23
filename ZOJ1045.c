@@ -8,7 +8,7 @@ int main()
   int cards = 0;
   printf("Please enther the length:\n");
   scanf("%f",&length);
-  cards = card_number(length);
+  cards = card_no(length);
   printf("%d card(s)\n", cards);
   
   return 0;
