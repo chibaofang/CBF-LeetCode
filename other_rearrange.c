@@ -1,3 +1,4 @@
+/*from c and pointer*/
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
@@ -17,7 +18,8 @@ int main()
   
   n_columns = read_column_numbers(columns, MAX_COLS);
   
-  while(gets(input) != NULL){
+  /* The gets() function has no means of preventing you typing the characters and so should be avoided. */
+  while(fgets(input, 100, stdin) != NULL){
     printf("Original input: %s\n", input);
     rearrange(output, input, n_columns, columns);
     printf("Rearrange line : %s\n", output);
@@ -29,12 +31,12 @@ int real_column_numbers(int columns[], int max)
 {
   int num = 0;
   int ch;
-  while(num < max && scanf("%d", &columns[num]) == 1 && column[num] >= 0){
+  while(num < max && scanf("%d", &columns[num]) == 1 && columns[num] >= 0){
     num += 1;
   }
   
   if (num % 2 != 0) {
-    puts("Last column number is not paired.");
+    puts("Last column number is not paired.\n");
     exit(EXIT_FAILURE);
   }
   
